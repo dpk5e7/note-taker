@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const { v4: uuidv4 } = require("uuid");
 const fsUtils = require("../helpers/fsUtils");
-
-// Helper method for generating unique ids
-const uuid = require("../helpers/uuid");
 
 // GET Route for retrieving all notes
 router.get("/", (req, res) => {
@@ -37,7 +35,7 @@ router.post("/", (req, res) => {
 
   if (req.body) {
     const newNote = {
-      id: uuid(),
+      id: uuidv4(),
       title,
       text,
     };
