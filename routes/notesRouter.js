@@ -13,14 +13,16 @@ router.get("/", (req, res) => {
 
 // GET route for retreiving one note
 router.get("/:id", (req, res) => {
-  // req.params.id is stored in the the / after "title" in the URL
+
   const requestedNoteID = req.params.id;
 
-  const notes = require("../db/db.json");
+  // Read the db.json file sync because we need the data in the next step.
+  const notes = JSON.parse(fs.readFileSync("./db/db.json"));
 
-  for (let i = 0; i < notes.length; i++) {
-    if (requestedNoteID === notes[i].id) {
-      return res.json(notes[i]);
+  // Loop through the notes and return the one where the ids match
+  for (const note of notes) {
+    if (requestedNoteID === note.id) {
+      return res.json(note);
     }
   }
 
@@ -32,9 +34,11 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   console.log(req.body);
 
-  const { title, text } = req.body;
-
   if (req.body) {
+    // Deconstruct the request body
+    const { title, text } = req.body;
+
+    // Create a note object with a unique id value
     const newNote = {
       id: uuidv4(),
       title,
@@ -53,6 +57,7 @@ router.delete("/:id", (req, res) => {
   // req.params.id is stored in the the / after "title" in the URL
   const noteIDtoDelete = req.params.id;
 
+  // Read the db.json file sync because we need the data in the next step.
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
 
   const newNotes = [];
