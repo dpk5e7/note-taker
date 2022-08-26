@@ -1,8 +1,10 @@
 # Note Taker
 
+[![License:](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Description
 
-TODO
+This Note Taker application can be used to write and save notes. This application uses an Express.js back end and saves and retrieves note data from a JSON file.
 
 ### User Story
 
@@ -34,74 +36,46 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
 
-UPDATE THIS...............................................
-
-After downloading the score code, run the following commands from the home directory.
+After downloading the source code, run the following commands from the home directory.
 
 ```bash
 npm init -y
-npm install inquirer@8.2.4
-npm install --save-dev jest
+npm i
 ```
 
 ## Usage
 
-UPDATE THIS...............................................
+The application is hosted on heroku at [https://dpk5e7-note-taker.herokuapp.com/](https://dpk5e7-note-taker.herokuapp.com/).
 
-The application will be invoked by using the following command:
-
-```bash
-npm start
-```
-
-If you invoke the application with following command, it will build the team profile with test data:
+The application will be invoked by using the following command when running it on your local machine:
 
 ```bash
-npm start test
+node server.js
 ```
 
-Note "npm start" can be replaced with "node index.js" and the application will execute the same.
+## License
+
+[![License:](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This application is covered under the [MIT License](https://opensource.org/licenses/MIT).
 
 ### Screenshots
 
 UPDATE THIS...............................................
 
-![Screenshot1](./assets/images/screenshot1.png)
+![Screenshot1](./public/assets/images/screenshot1.png)
 
-![ScreenshotHTML](./assets/images/screenshot_html.png)
-
-[Video Link](https://drive.google.com/file/d/1GjwUvUtFDKZYXj-uDgfaRx6NZZcrA85L/view)
+![Screenshot2](./public/assets/images/screenshot2.png)
 
 ## Contributing
 
-UPDATE THIS...............................................
-
 As this project is part of an individual assignment for the University of Denver's Coding Bootcamp, it would be inappropriate for anyone else to contribute to this project.
-
-## Tests
-
-UPDATE THIS...............................................
-
-A total of 20 unit tests are located in the following files:
-
-```md
-./test/Employee.test.js
-./test/Engineer.test.js
-./test/Intern.test.js
-./test/Manager.test.js
-```
-
-The tests will be invoked via Jest with the following command:
-
-```bash
-npm test
-```
 
 ## Questions
 

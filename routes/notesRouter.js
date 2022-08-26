@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { v4: uuidv4 } = require("uuid");
 const fsUtils = require("../helpers/fsUtils");
+const fs = require("fs");
 
 // GET Route for retrieving all notes
 router.get("/", (req, res) => {
@@ -52,7 +53,7 @@ router.delete("/:id", (req, res) => {
   // req.params.id is stored in the the / after "title" in the URL
   const noteIDtoDelete = req.params.id;
 
-  const notes = require("../db/db.json");
+  const notes = JSON.parse(fs.readFileSync("./db/db.json"));
 
   const newNotes = [];
 
