@@ -67,8 +67,6 @@ This application is covered under the [MIT License](https://opensource.org/licen
 
 ### Screenshots
 
-UPDATE THIS...............................................
-
 ![Screenshot1](./public/assets/images/screenshot1.png)
 
 ![Screenshot2](./public/assets/images/screenshot2.png)
